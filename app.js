@@ -6,7 +6,7 @@ const app = express();
 app.get("/image", async (req, res) => {
   const query = req.query;
   const imglink = Object.keys(query)[0];
-
+  console.log("imglink: ", imglink);
   try {
     const response = await axios.get(imglink, { responseType: "arraybuffer" });
 
